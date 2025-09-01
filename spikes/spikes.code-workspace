@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../../cloned/melonjs/examples"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/eslint.config.js": true,
+			"**/package-lock.json": true,
+			"**/svelte.config.js": true,
+			"**/tsconfig.json": true,
+			"**/vite.config.ts": true,
+			"**/.npmrc": true,
+			"**/.prettierrc": true,
+			"**/.prettierignore": true,
+			".gitignore": true
+		}
+	}
+}
