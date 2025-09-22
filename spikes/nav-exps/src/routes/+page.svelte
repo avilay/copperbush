@@ -1,48 +1,48 @@
 <script lang="ts">
-  import TopNav from "./TopNav.svelte";
-  import BottomNav from "./BottomNav.svelte";
-	import SideNav from "./SideNav.svelte";
-
-  let previews = ["placeholder-0", "placeholder-1", "placeholder-2", "placeholder-3", "placeholder-4", "placeholder-5"];
-
-  let game = {
-    id: "game-1",
-    name: "Game One",
-    url: "",
-    logoUrl: "/personal-logo-64x64.png",
-    starCount: 345,
-    commentCount: 123
-  }
+  // Define the list of experiments
+  const experiments = [
+    { id: 'exp1', name: 'Experiment 1', path: '/exp1' },
+    { id: 'exp2', name: 'Experiment 2', path: '/exp2' },
+    { id: 'exp3', name: 'Experiment 3', path: '/exp3' }
+  ];
 </script>
 
-<TopNav />
-<div id="previews">
-{#each previews as preview, idx}
-  <div class="preview" id="preview-{idx}">
-    <img src="/{preview}.png" alt="game preview gif" />
-    <SideNav {game} />
-  </div>
-{/each}
-</div> 
-<BottomNav />
+<h1>Experiments</h1>
+
+<ul>
+  {#each experiments as exp}
+    <li>
+      <a href={exp.path}>{exp.name}</a>
+    </li>
+  {/each}
+</ul>
 
 <style>
-  #previews {
-    background-color: lightpink;
+  h1 {
+    color: #333;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style: none;
     padding: 0;
-    overflow-y: scroll;
-    height: 100vh;
-    scroll-snap-type: y mandatory; /* Enable scroll snapping */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   }
-
-  .preview {
-    scroll-snap-align: start; /* Snap to the start of each card */
+  
+  li {
+    margin-bottom: 0.5rem;
   }
-
-  img {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
+  
+  a {
+    color: #0066cc;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  a:hover {
+    background-color: #f0f0f0;
   }
 </style>

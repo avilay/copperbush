@@ -6,6 +6,16 @@ html, body {
   box-sizing: border-box;
 }
 
+@font-face {
+  src: url("./fonts/OpenSans-Regular.ttf");
+  font-family: OpenSansRegular;
+}
+
+@font-face {
+  src: url("./fonts/OpenSans_Condensed-Regular.ttf");
+  font-family: OpenSansNarrow;
+}
+
 body {
-  font-family: Verdana Verdana, Geneva, Tahoma, sans-serif;
+  font-family: OpenSansRegular, Verdana, Geneva, Tahoma, sans-serif;
 }

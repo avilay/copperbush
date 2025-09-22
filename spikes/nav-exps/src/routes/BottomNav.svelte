@@ -72,7 +72,6 @@
     top: auto;
     bottom: 0;
     left: 0;
-    font-size: 0.75rem;
   }
 
   nav > ul {
@@ -94,5 +93,6 @@
     font-family: inherit;
     color: #fff;
     text-decoration: none;
+    font-size: 0.75rem;
   }
 </style>

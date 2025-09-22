@@ -75,9 +75,9 @@
 	.menu-item > a {
 		padding: 0;
 		margin: 0;
-		font-family: inherit;
-		color: #fff;
 		text-decoration: none;
+		color: #fff;
+		font-family: OpenSansNarrow;
 	}
 
 	.menu-item > a:hover, .menu-item > a:focus {
